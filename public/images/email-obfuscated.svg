@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="320" height="28" viewBox="0 0 320 28" role="img" aria-labelledby="title desc">
+  <title id="title">Obfuscated email address</title>
+  <desc id="desc">hello at ericdyke dot com</desc>
+  <rect x="0.5" y="0.5" width="319" height="27" rx="6" fill="#f8fafc" stroke="#cbd5e1"/>
+  <text x="12" y="18" font-family="IBM Plex Sans, Segoe UI, Arial, sans-serif" font-size="13" fill="#0f172a">
+    hello [at] ericdyke [dot] com
+  </text>
+</svg>

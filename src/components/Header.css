@@ -1,0 +1,129 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  height: var(--header-height);
+  background-color: transparent;
+  backdrop-filter: blur(0);
+  -webkit-backdrop-filter: blur(0);
+  border-bottom: 1px solid transparent;
+  transition: background-color 0.22s ease, border-color 0.22s ease, backdrop-filter 0.22s ease;
+}
+
+.header--scrolled {
+  background-color: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom-color: rgba(15, 23, 42, 0.12);
+}
+
+.header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  height: 100%;
+  gap: 0.6rem 1rem;
+}
+
+.header__logo {
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--color-text-primary);
+  transition: color 0.2s ease;
+}
+
+.header--scrolled .header__logo {
+  color: #0f172a;
+}
+
+.header__logo:hover {
+  color: var(--color-accent);
+}
+
+.header__nav-list {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 2.5rem;
+  list-style: none;
+}
+
+.header__nav {
+  flex: 1 1 440px;
+}
+
+.header__nav-link {
+  font-size: 0.9375rem;
+  font-weight: 500;
+  color: var(--color-text-secondary);
+  letter-spacing: 0.01em;
+  transition: color 0.2s ease;
+  position: relative;
+}
+
+.header--scrolled .header__nav-link {
+  color: #334155;
+}
+
+.header__nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--color-accent);
+  border-radius: 2px;
+  transform: scaleX(0);
+  transition: transform 0.2s ease;
+}
+
+.header__nav-link:hover {
+  color: var(--color-text-primary);
+}
+
+.header--scrolled .header__nav-link:hover {
+  color: #0f172a;
+}
+
+.header__nav-link:hover::after {
+  transform: scaleX(1);
+}
+
+@media (max-width: 900px), (max-device-width: 900px) {
+  .header {
+    height: auto;
+  }
+
+  .header__inner {
+    height: auto;
+    padding: 0.8rem 1.25rem;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 0.7rem;
+  }
+
+  .header__nav {
+    flex: none;
+    width: 100%;
+  }
+
+  .header__nav-list {
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 0.65rem 1rem;
+  }
+
+  .header__nav-link {
+    font-size: 0.875rem;
+  }
+}

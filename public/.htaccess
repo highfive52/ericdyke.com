@@ -1,0 +1,23 @@
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+
+  RewriteRule ^index\.html$ - [L]
+
+  # Let existing files and folders load normally.
+  RewriteCond %{REQUEST_FILENAME} -f [OR]
+  RewriteCond %{REQUEST_FILENAME} -d
+  RewriteRule ^ - [L]
+
+  # Route app URLs to SPA entry, but do not rewrite static asset requests.
+  RewriteCond %{REQUEST_URI} !\.(?:js|css|map|png|jpe?g|gif|svg|webp|ico|woff2?)$ [NC]
+  RewriteRule . /index.html [L]
+</IfModule>
+# Tell Chrome/Edge not to store index.html; always revalidate with the server.
+<IfModule mod_headers.c>
+  <FilesMatch "^index\.html$">
+    Header set Cache-Control "no-cache, no-store, must-revalidate"
+    Header set Pragma "no-cache"
+    Header set Expires "0"
+  </FilesMatch>
+</IfModule>
