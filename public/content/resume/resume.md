@@ -1,5 +1,5 @@
 ## **ERIC DYKE**
-Boston, MA |  [linkedin.com/in/ericdyke](https://linkedin.com/in/ericdyke)
+Boston, MA | <a href="https://linkedin.com/in/ericdyke" target="_blank" rel="noreferrer">linkedin.com/in/ericdyke</a> | <a href="https://github.com/highfive52" target="_blank" rel="noreferrer">github.com/highfive52</a>
 
 ---
 

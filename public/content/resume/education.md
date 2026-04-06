@@ -32,4 +32,22 @@ A foundation in software and data systems supported by continuous learning in an
 - **<a href="https://learn.microsoft.com/en-us/users/ericdyke-7554/transcript/d4mxmi6kjxow122" target="_blank" rel="noreferrer">MCSE: Data Management and Analytics</a>** – Microsoft | Sep 2016 – Aug 2019 | Cert # F807-7327
 - **<a href="https://www.credly.com/badges/705c5b5a-7516-4577-9420-00b05d4e59d3" target="_blank" rel="noreferrer">Cisco Certified Network Associate Routing and Switching (CCNA)</a>** - Cisco | Jan 2011 - Jan 2014
 
-### 
+### **WORKSHOPS**
+
+#### Snowflake (On-demand)
+
+<div class="workshop-icon-row" aria-label="Workshop badges">
+	<img src="/images/snowflake_badge1.png" alt="Snowflake Data Warehousing workshop badge" class="cert-icon" />
+	<img src="/images/snowflake_badge2.png" alt="Snowflake Collaboration, Marketplace, and Cost Estimation workshop badge" class="cert-icon" />
+	<img src="/images/snowflake_badge3.png" alt="Snowflake Data Application Builders workshop badge" class="cert-icon" />
+	<img src="/images/snowflake_badge4.png" alt="Snowflake Data Lake workshop badge" class="cert-icon" />
+	<img src="/images/snowflake_badge5.png" alt="Snowflake Data Engineering workshop badge" class="cert-icon" />
+</div>
+
+- **<a href="https://achieve.snowflake.com/4518b1c9-46df-4ca0-b971-8e125af3fd26#acc.Rv8aE05T" target="_blank" rel="noreferrer">Hands-On Essentials: Data Warehousing Workshop</a>** | Mar 2026
+- **<a href="https://achieve.snowflake.com/56f6a79f-3891-4f81-8821-abe99d426a06#acc.jpkhY1NJ" target="_blank" rel="noreferrer">Hands-On Essentials: Collaboration, Marketplace & Cost Estimation Workshop</a>** Mar 2026
+- **<a href="https://achieve.snowflake.com/5b5c4d4c-49b4-47e0-bafb-559cd37c8486#acc.O85TV7rS" target="_blank" rel="noreferrer">Hands-On Essentials: Data Application Builders Workshop</a>** Mar 2026
+- **<a href="https://achieve.snowflake.com/886cb441-ee59-4eef-a894-89c3e117a78f#acc.U2Ve3rWJ" target="_blank" rel="noreferrer">Hands-On Essentials: Data Lake Workshop</a>** Mar 2026
+- **<a href="https://achieve.snowflake.com/07e061d9-eac6-4a1f-af8e-4a1542dfaf9b#acc.sTNbcf3A" target="_blank" rel="noreferrer">Hands-On Essentials: Data Engineering Workshop</a>** Mar 2026
+
+

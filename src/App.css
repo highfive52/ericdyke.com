@@ -624,7 +624,8 @@
   padding: 0.18rem 0.35rem;
 }
 
-.credential-page__content .cert-icon-row {
+.credential-page__content .cert-icon-row,
+.credential-page__content .workshop-icon-row {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
