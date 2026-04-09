@@ -24,7 +24,12 @@ type MarkdownDoc = {
   body: string
 }
 
-const articleFiles = ['article1.md', 'article2.md', 'article3.md']
+const articleFiles = [
+  'ai-doesnt-eliminate-the-hard-parts-of-engineering.md',
+  'the-problem-hasnt-changed-only-the-tools-have.md',
+  'consumption-driven-architecture-from-ingestion-to-insight.md',
+  'how-data-platforms-evolved-from-integration-to-composability-and-back-again.md',
+]
 const BLOG_TILE_EXCERPT_WORDS = 30
 
 function stripMarkdown(markdown: string) {
