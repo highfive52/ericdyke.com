@@ -1,7 +1,7 @@
 ---
 title: "How Data Platforms Evolved from Integration to Composability—and Back Again"
 date: "2026-04-08"
-tags: "Data Pipelines, Data Architecture, Consumption Layer"
+tags: "Data Platforms, Integration, Composability, Cloud Architecture"
 summary: "In data engineering, pipelines are often described as a flow from ingestion to consumption. In practice, however, the direction of influence is reversed: the way data will ultimately be consumed determines how it must be modeled, stored, and executed."
 ---
 

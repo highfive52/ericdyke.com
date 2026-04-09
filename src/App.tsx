@@ -130,6 +130,7 @@ function HomePage({ articles }: HomePageProps) {
   const [formMessage, setFormMessage] = useState('')
   const [lastSubmitTime, setLastSubmitTime] = useState(0)
   const [copyStatus, setCopyStatus] = useState<'idle' | 'copied' | 'error'>('idle')
+  const [searchTerm, setSearchTerm] = useState('')
 
   const SUBMIT_COOLDOWN_MS = 30_000
   const contactEmail = ['hello', 'ericdyke.com'].join('@')
@@ -192,17 +193,30 @@ function HomePage({ articles }: HomePageProps) {
     }
   }
 
-  const totalPages = Math.max(1, Math.ceil(articles.length / ARTICLES_PER_PAGE))
+
+  // Filter articles by search term (title, summary, tags)
+  const filteredArticles = useMemo(() => {
+    if (!searchTerm.trim()) return articles
+    const term = searchTerm.trim().toLowerCase()
+    return articles.filter((article) => {
+      const inTitle = article.title.toLowerCase().includes(term)
+      const inSummary = article.summary.toLowerCase().includes(term)
+      const inTags = article.tags.some((tag) => tag.toLowerCase().includes(term))
+      return inTitle || inSummary || inTags
+    })
+  }, [articles, searchTerm])
+
+  const totalPages = Math.max(1, Math.ceil(filteredArticles.length / ARTICLES_PER_PAGE))
 
   useEffect(() => {
     setCurrentPage(1)
-  }, [articles.length])
+  }, [filteredArticles.length])
 
   const pageArticles = useMemo(() => {
     const page = Math.min(currentPage, totalPages)
     const start = (page - 1) * ARTICLES_PER_PAGE
-    return articles.slice(start, start + ARTICLES_PER_PAGE)
-  }, [articles, currentPage, totalPages])
+    return filteredArticles.slice(start, start + ARTICLES_PER_PAGE)
+  }, [filteredArticles, currentPage, totalPages])
 
   const changePage = (page: number) => {
     const nextPage = Math.max(1, Math.min(page, totalPages))
@@ -228,28 +242,46 @@ function HomePage({ articles }: HomePageProps) {
             data into reliable decision-making tools.
           </p>
 
-          <div className="articles-grid">
-            {pageArticles.map((article) => (
-              <article className="article-card" key={article.slug}>
-                <p className="article-card__meta">
-                  <span>{article.date}</span>
-                  <span>{article.readTime}</span>
-                </p>
-                <h3>{article.title}</h3>
-                <p>{article.summary || article.excerpt}</p>
-                <ul className="article-card__tags" aria-label="Article tags">
-                  {article.tags.map((tag) => (
-                    <li key={tag}>{tag}</li>
-                  ))}
-                </ul>
-                <Link to={`/blog/${article.slug}`} className="article-card__readmore">
-                  Read more
-                </Link>
-              </article>
-            ))}
+          {/* Search box */}
+          <div style={{ margin: '1.5rem 0 2.5rem 0', maxWidth: 400 }}>
+            <input
+              type="text"
+              value={searchTerm}
+              onChange={e => setSearchTerm(e.target.value)}
+              placeholder="Search articles by title, summary, or tag..."
+              style={{ width: '100%', padding: '0.7rem 1rem', fontSize: '1rem', borderRadius: 8, border: '1px solid #cbd5e1' }}
+              aria-label="Search blog articles"
+            />
           </div>
 
-          {totalPages > 1 && (
+          <div className="articles-grid">
+            {pageArticles.length === 0 ? (
+              <p style={{ gridColumn: '1/-1', color: '#64748b', fontSize: '1.1rem', margin: '2rem 0' }}>
+                No articles found matching your search.
+              </p>
+            ) : (
+              pageArticles.map((article) => (
+                <article className="article-card" key={article.slug}>
+                  <p className="article-card__meta">
+                    <span>{article.date}</span>
+                    <span>{article.readTime}</span>
+                  </p>
+                  <h3>{article.title}</h3>
+                  <p>{article.summary || article.excerpt}</p>
+                  <ul className="article-card__tags" aria-label="Article tags">
+                    {article.tags.map((tag) => (
+                      <li key={tag}>{tag}</li>
+                    ))}
+                  </ul>
+                  <Link to={`/blog/${article.slug}`} className="article-card__readmore">
+                    Read more
+                  </Link>
+                </article>
+              ))
+            )}
+          </div>
+
+          {totalPages > 1 && pageArticles.length > 0 && (
             <nav className="blog-pagination" aria-label="Blog pagination">
               <button
                 type="button"

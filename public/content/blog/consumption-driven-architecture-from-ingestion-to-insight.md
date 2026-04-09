@@ -1,7 +1,7 @@
 ---
 title: "Consumption-Driven Architecture: From Ingestion to Insight"
 date: "2026-03-25"
-tags: "Data Pipelines, Data Architecture, Consumption Layer"
+tags: "Data Engineering, Data Modeling, Consumption Patterns, Analytics"
 summary: "In data engineering, pipelines are often described as a flow from ingestion to consumption. In practice, however, the direction of influence is reversed: the way data will ultimately be consumed determines how it must be modeled, stored, and executed."
 ---
 

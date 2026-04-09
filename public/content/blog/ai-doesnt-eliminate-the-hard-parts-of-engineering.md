@@ -1,7 +1,7 @@
 ---
 title: "AI Doesn’t Eliminate The Hard Parts Of Engineering—It Exposes Them"
 date: "2026-03-27"
-tags: "Agentic AI, VSCode, PyData"
+tags: "AI Agents, Software Engineering, Human Context, Developer Workflow"
 summary: "I saw two excellent AI agent presentations at a PyData meetup in Cambridge, MA a few weeks ago. What stuck with me afterward wasn’t just what the AI could do, but what it revealed: AI agents aren’t replacing developers—they’re exposing how much of software and data engineering was always about context, not code."
 ---
 
