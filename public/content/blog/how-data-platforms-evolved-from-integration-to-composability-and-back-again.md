@@ -144,6 +144,12 @@ Teams can now design modular, flexible systems without having to fully rebuild t
 
 ### Closing Thought
 
+| Era             | Strength                  | Weakness                     |
+| --------------- | ------------------------- | ---------------------------- |
+| On-Prem         | Simplicity, integration   | Rigid, hard to scale         |
+| Containers      | Flexibility, control      | Operational complexity       |
+| Cloud Platforms | Scalability + abstraction | Less control, vendor lock-in |
+
 The evolution of data platforms can be understood as a recurring tension between **integration vs. composability**.
 
 * The on-prem era favored integration, offering simplicity and cohesion within a single platform.

@@ -29,6 +29,7 @@ const articleFiles = [
   'the-problem-hasnt-changed-only-the-tools-have.md',
   'consumption-driven-architecture-from-ingestion-to-insight.md',
   'how-data-platforms-evolved-from-integration-to-composability-and-back-again.md',
+  'openclaw-claude-economics-ai-agents.md',
 ]
 const BLOG_TILE_EXCERPT_WORDS = 30
 
@@ -452,6 +453,44 @@ function HomePage({ articles }: HomePageProps) {
                         d="M12 2.5a9.5 9.5 0 0 0-3 18.5c.5.1.7-.2.7-.5v-1.9c-2.9.6-3.5-1.2-3.5-1.2-.5-1.1-1.1-1.4-1.1-1.4-.9-.6.1-.6.1-.6 1 .1 1.6 1 1.6 1 .9 1.5 2.5 1.1 3.1.8.1-.6.4-1.1.7-1.4-2.3-.3-4.7-1.1-4.7-5A3.9 3.9 0 0 1 7 7.4c-.1-.3-.5-1.3.1-2.7 0 0 .8-.3 2.8 1a9.7 9.7 0 0 1 5.1 0c2-1.3 2.8-1 2.8-1 .6 1.4.2 2.4.1 2.7.7.8 1.1 1.9 1.1 3.2 0 3.9-2.4 4.7-4.7 5 .4.3.8 1 .8 2.1v3.1c0 .3.2.6.7.5A9.5 9.5 0 0 0 12 2.5Z"
                         fill="currentColor"
                       />
+                    </svg>
+                  </a>
+                  <a
+                    href="https://share.streamlit.io/user/highfive52"
+                    target="_blank"
+                    rel="noreferrer"
+                    aria-label="Streamlit"
+                  >
+                    <svg width="24" height="24" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg" focusable="false" aria-hidden="true">
+                      <g>
+                        <path d="M60 13.5c1.1-1.9 3.8-1.9 4.9 0l16.1 27.2c.7 1.2 2.6 1.2 3.3 0l12.2-14.1c1.2-1.4 3.5-1.1 4.3.6l8.4 16.1c.7 1.3.1 2.9-1.2 3.5l-46.7 20.2c-.7.3-1.5.3-2.2 0L12.9 46.8c-1.3-.6-1.9-2.2-1.2-3.5l8.4-16.1c.8-1.7 3.1-2 4.3-.6l12.2 14.1c.7 1.2 2.6 1.2 3.3 0L60 13.5z" fill="#FF4B4B"/>
+                        <rect x="12" y="80" width="96" height="24" rx="12" fill="#FF4B4B"/>
+                      </g>
+                    </svg>
+                  </a>
+                  <a
+                    href="https://huggingface.co/HighFive52"
+                    target="_blank"
+                    rel="noreferrer"
+                    aria-label="Hugging Face"
+                  >
+                    {/* Official Hugging Face mascot SVG */}
+                    <svg width="24" height="24" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg" focusable="false" aria-hidden="true">
+                      <g>
+                        <circle cx="128" cy="128" r="120" fill="#FFD21F"/>
+                        <ellipse cx="88" cy="120" rx="20" ry="24" fill="#fff"/>
+                        <ellipse cx="168" cy="120" rx="20" ry="24" fill="#fff"/>
+                        <ellipse cx="88" cy="120" rx="10" ry="12" fill="#2F2F2F"/>
+                        <ellipse cx="168" cy="120" rx="10" ry="12" fill="#2F2F2F"/>
+                        <path d="M70 170c10 18 38 28 58 28s48-10 58-28c6-10-2-22-14-18-18 6-38 10-44 10s-26-4-44-10c-12-4-20 8-14 18z" fill="#fff" stroke="#2F2F2F" strokeWidth="6"/>
+                        <ellipse cx="128" cy="190" rx="16" ry="10" fill="#fff"/>
+                        <ellipse cx="110" cy="185" rx="3" ry="4" fill="#FFD21F"/>
+                        <ellipse cx="146" cy="185" rx="3" ry="4" fill="#FFD21F"/>
+                        <ellipse cx="128" cy="200" rx="6" ry="3" fill="#FFD21F"/>
+                        <ellipse cx="60" cy="160" rx="8" ry="12" fill="#FFD21F"/>
+                        <ellipse cx="196" cy="160" rx="8" ry="12" fill="#FFD21F"/>
+                        <ellipse cx="128" cy="128" rx="120" ry="120" fill="none" stroke="#FFD21F" strokeWidth="8"/>
+                      </g>
                     </svg>
                   </a>
                 </div>

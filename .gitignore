@@ -1,9 +1,6 @@
-# Logs
-logs
-*.log
-npm-debug.log*
+### Node/Vite/React Standard .gitignore ###
 
-# Dependencies
+# Dependency directories
 node_modules/
 .pnp
 .pnp.js
@@ -11,17 +8,60 @@ node_modules/
 # Build output
 dist/
 dist-ssr/
-*.local
 
-# Editor
-.vscode/*
+# Local env files
+.env.local
+.env.*.local
+
+# Log files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Editor directories and files
+.vscode/
 !.vscode/extensions.json
-.idea
+.idea/
+.DS_Store
 *.suo
 *.ntvs*
 *.njsproj
 *.sln
 *.sw?
 
-# Misc
-docs/
+# System files
+Thumbs.db
+.DS_Store
+
+# Optional: OS/Tooling
+*.local
+
+# Optional: Mac
+.AppleDouble
+.LSOverride
+
+# Optional: Windows
+Desktop.ini
+$RECYCLE.BIN/
+
+# Optional: Linux
+*~
+
+# Optional: npm cache
+.npm
+
+# Optional: yarn v2
+.yarn/cache/
+.yarn/unplugged/
+.yarn/build-state.yml
+.yarn/install-state.gz
+.yarn/patches/
+.yarn/releases/
+.yarn/plugins/
+.yarn/sdks/
+.yarn/versions/
+
+# Optional: Vite preview cache
+.vite/
+
+# End of .gitignore
