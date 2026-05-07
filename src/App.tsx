@@ -4,6 +4,8 @@ import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
 import remarkBreaks from 'remark-breaks'
 import rehypeRaw from 'rehype-raw'
+import rehypeHighlight from 'rehype-highlight'
+import 'highlight.js/styles/github.css'
 import Header from './components/Header'
 import Hero from './components/Hero'
 import './App.css'
@@ -30,6 +32,8 @@ const articleFiles = [
   'consumption-driven-architecture-from-ingestion-to-insight.md',
   'how-data-platforms-evolved-from-integration-to-composability-and-back-again.md',
   'openclaw-claude-economics-ai-agents.md',
+  'analytics-ready-baseball-dataset-python-parquet.md',
+  'parquet-tables-to-leaderboards-duckdb-fastapi-streamlit.md'
 ]
 const BLOG_TILE_EXCERPT_WORDS = 30
 
@@ -594,7 +598,7 @@ function BlogArticlePage({ articles }: BlogArticlePageProps) {
           ))}
         </ul>
         <div className="article-page__content">
-          <ReactMarkdown remarkPlugins={[remarkGfm]} rehypePlugins={[rehypeRaw]}>
+          <ReactMarkdown remarkPlugins={[remarkGfm]} rehypePlugins={[rehypeRaw, rehypeHighlight]}>
             {article.content}
           </ReactMarkdown>
         </div>
@@ -635,7 +639,7 @@ function ResumePage() {
         <p className="section__eyebrow">Resume</p>
         {doc?.meta.title && <h1 className="section__title">{doc.meta.title}</h1>}
         <div className="credential-page__content">
-          <ReactMarkdown remarkPlugins={[remarkGfm, remarkBreaks]} rehypePlugins={[rehypeRaw]}>
+          <ReactMarkdown remarkPlugins={[remarkGfm, remarkBreaks]} rehypePlugins={[rehypeRaw, rehypeHighlight]}>
             {doc?.body || 'Loading resume content...'}
           </ReactMarkdown>
         </div>
@@ -676,7 +680,7 @@ function EducationPage() {
         <p className="section__eyebrow">Education</p>
         {doc?.meta.title && <h1 className="section__title">{doc.meta.title}</h1>}
         <div className="credential-page__content">
-          <ReactMarkdown remarkPlugins={[remarkGfm, remarkBreaks]} rehypePlugins={[rehypeRaw]}>
+          <ReactMarkdown remarkPlugins={[remarkGfm, remarkBreaks]} rehypePlugins={[rehypeRaw, rehypeHighlight]}>
             {doc?.body || 'Loading education content...'}
           </ReactMarkdown>
         </div>
