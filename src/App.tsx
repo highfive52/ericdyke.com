@@ -19,6 +19,13 @@ type BlogArticle = {
   excerpt: string
   readTime: string
   content: string
+  hidden: boolean
+  series?: string
+  seriesPart?: number
+  next?: string
+  nextTitle?: string
+  prev?: string
+  prevTitle?: string
 }
 
 type MarkdownDoc = {
@@ -33,8 +40,15 @@ const articleFiles = [
   'how-data-platforms-evolved-from-integration-to-composability-and-back-again.md',
   'openclaw-claude-economics-ai-agents.md',
   'analytics-ready-baseball-dataset-python-parquet.md',
-  'parquet-tables-to-leaderboards-duckdb-fastapi-streamlit.md'
-]
+  'parquet-tables-to-leaderboards-duckdb-fastapi-streamlit.md',
+  'part-1-introdcution.md',
+  'part-2-define.md',
+  'part-3-design.md',
+  'part-3-design.md',
+  'part-4-execution.md',
+  'part-5-testing.md',
+  'part-6-go-live.md',
+  'part-7-conclusion.md']
 const BLOG_TILE_EXCERPT_WORDS = 30
 
 function stripMarkdown(markdown: string) {
@@ -116,6 +130,13 @@ async function loadBlogArticles(): Promise<BlogArticle[]> {
         excerpt,
         readTime: `${minutes} min read`,
         content: body,
+        hidden: meta.hidden === 'true',
+        series: meta.series || undefined,
+        seriesPart: meta.series_part ? parseInt(meta.series_part, 10) : undefined,
+        next: meta.next || undefined,
+        nextTitle: meta.next_title || undefined,
+        prev: meta.prev || undefined,
+        prevTitle: meta.prev_title || undefined,
       }
     }),
   )
@@ -199,11 +220,12 @@ function HomePage({ articles }: HomePageProps) {
   }
 
 
-  // Filter articles by search term (title, summary, tags)
+  // Filter articles by search term (title, summary, tags), excluding hidden series parts
   const filteredArticles = useMemo(() => {
-    if (!searchTerm.trim()) return articles
+    const visible = articles.filter((a) => !a.hidden)
+    if (!searchTerm.trim()) return visible
     const term = searchTerm.trim().toLowerCase()
-    return articles.filter((article) => {
+    return visible.filter((article) => {
       const inTitle = article.title.toLowerCase().includes(term)
       const inSummary = article.summary.toLowerCase().includes(term)
       const inTags = article.tags.some((tag) => tag.toLowerCase().includes(term))
@@ -598,10 +620,41 @@ function BlogArticlePage({ articles }: BlogArticlePageProps) {
           ))}
         </ul>
         <div className="article-page__content">
-          <ReactMarkdown remarkPlugins={[remarkGfm]} rehypePlugins={[rehypeRaw, rehypeHighlight]}>
+          <ReactMarkdown remarkPlugins={[remarkGfm, remarkBreaks]} rehypePlugins={[rehypeRaw, rehypeHighlight]}>
             {article.content}
           </ReactMarkdown>
         </div>
+
+        {(article.prev || article.next) && (
+          <nav className="article-page__series-nav" aria-label="Series navigation">
+            {article.prev ? (
+              <Link to={`/blog/${article.prev}`} className="article-page__series-nav-prev">
+                <span className="article-page__series-nav-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" focusable="false">
+                    <path d="M14.5 5.5 8 12l6.5 6.5" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
+                </span>
+                <span>
+                  <span className="article-page__series-nav-label">Previous</span>
+                  <span className="article-page__series-nav-title">{article.prevTitle || article.prev}</span>
+                </span>
+              </Link>
+            ) : <span />}
+            {article.next ? (
+              <Link to={`/blog/${article.next}`} className="article-page__series-nav-next">
+                <span>
+                  <span className="article-page__series-nav-label">Next</span>
+                  <span className="article-page__series-nav-title">{article.nextTitle || article.next}</span>
+                </span>
+                <span className="article-page__series-nav-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" focusable="false">
+                    <path d="M9.5 5.5 16 12l-6.5 6.5" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
+                </span>
+              </Link>
+            ) : <span />}
+          </nav>
+        )}
       </article>
     </main>
   )

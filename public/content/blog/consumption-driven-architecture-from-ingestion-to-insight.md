@@ -50,10 +50,10 @@ Neither approach is inherently better—they are optimized for different types o
 As data has become more deeply embedded in applications, APIs have emerged as another major consumption layer. Unlike dashboards, which are typically optimized for exploration and aggregation, APIs are designed for programmatic access, often in support of user-facing features or operational workflows.
 
 API consumers typically expect:
-• Narrow, purpose-built endpoints
-• Low-latency responses
-• Predictable schemas
-• Data shaped for specific use cases rather than general exploration
+* Narrow, purpose-built endpoints
+* Low-latency responses
+* Predictable schemas
+* Data shaped for specific use cases rather than general exploration
 
 This often leads to denormalized or pre-joined representations of data that can be returned quickly without requiring additional computation at request time. In some cases, data is pre-aggregated or precomputed to meet latency requirements.
 
@@ -64,11 +64,11 @@ Unlike OLAP models, which prioritize analytical flexibility, API-driven models p
 Machine learning introduces another distinct set of requirements for data consumption. Unlike dashboards or APIs, ML systems typically consume data in the form of features—structured inputs that must be consistent, well-defined, and aligned with training and inference workflows.
 
 Feature datasets typically require:
-• Historical snapshots of data at specific points in time
-• Consistent definitions between training and inference
-• Handling of missing values, normalization, and encoding
-• Time-aware joins and aggregations
-• Prevention of data leakage through careful temporal modeling
+* Historical snapshots of data at specific points in time
+* Consistent definitions between training and inference
+* Handling of missing values, normalization, and encoding
+* Time-aware joins and aggregations
+* Prevention of data leakage through careful temporal modeling
 
 These requirements lead to data structures that prioritize statistical consistency and reproducibility over user-facing interpretation.
 
