@@ -6,7 +6,7 @@ summary: "As data engineers progress from implementation to technical leadership
 series: "Technical Leadership in Data Engineering"
 series_part: "7"
 hidden: "true"
-prev: "part-6-go-live"
+prev: "technical-leadership-part-6-go-live"
 prev_title: "Part 6: Go-Live"
 ---
 

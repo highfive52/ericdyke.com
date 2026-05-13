@@ -6,9 +6,9 @@ summary: "As data engineers progress from implementation to technical leadership
 series: "Technical Leadership in Data Engineering"
 series_part: "3"
 hidden: "true"
-prev: "part-2-define"
+prev: "technical-leadership-part-2-define"
 prev_title: "Part 2: Define"
-next: "part-4-execution"
+next: "technical-leadership-part-4-execution"
 next_title: "Part 4: Execution"
 ---
 

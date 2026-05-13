@@ -5,7 +5,7 @@ tags: "Data Engineering, Technical Leadership, Project Management, Architecture,
 summary: "As data engineers progress from implementation to technical leadership, success becomes less about individual tasks and more about organizing delivery across systems, stakeholders, and business objectives. Before architecture diagrams, sprint boards, or pipelines are created, projects require alignment around ownership, goals, responsibilities, and milestones. The Define phase establishes this foundation by creating a centralized project alignment document that guides communication, decision making, and execution throughout the lifecycle of an enterprise data initiative."
 series: "Technical Leadership in Data Engineering"
 series_part: "1"
-next: "part-2-define"
+next: "technical-leadership-part-2-define"
 next_title: "Part 2: Define"
 ---
 

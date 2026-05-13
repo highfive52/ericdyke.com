@@ -41,14 +41,19 @@ const articleFiles = [
   'openclaw-claude-economics-ai-agents.md',
   'analytics-ready-baseball-dataset-python-parquet.md',
   'parquet-tables-to-leaderboards-duckdb-fastapi-streamlit.md',
-  'part-1-introdcution.md',
-  'part-2-define.md',
-  'part-3-design.md',
-  'part-3-design.md',
-  'part-4-execution.md',
-  'part-5-testing.md',
-  'part-6-go-live.md',
-  'part-7-conclusion.md']
+  'technical-leadership-part-1-introdcution.md',
+  'technical-leadership-part-2-define.md',
+  'technical-leadership-part-3-design.md',
+  'technical-leadership-part-4-execution.md',
+  'technical-leadership-part-5-testing.md',
+  'technical-leadership-part-6-go-live.md',
+  'technical-leadership-part-7-conclusion.md',
+  'lakehouse-part-1-architecture-before-the-cloud.md',
+  'lakehouse-part-2-streaming-kafka-spark-bronze-layer.md',
+  'lakehouse-part-3-silver-layer-normalization-deduplication.md',
+  'lakehouse-part-4-gold-layer-analytics-duckdb-fastapi.md',
+  'lakehouse-part-5-local-to-cloud-architecture.md'
+]
 const BLOG_TILE_EXCERPT_WORDS = 30
 
 function stripMarkdown(markdown: string) {
