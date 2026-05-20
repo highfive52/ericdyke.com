@@ -52,8 +52,13 @@ const articleFiles = [
   'lakehouse-part-2-streaming-kafka-spark-bronze-layer.md',
   'lakehouse-part-3-silver-layer-normalization-deduplication.md',
   'lakehouse-part-4-gold-layer-analytics-duckdb-fastapi.md',
-  'lakehouse-part-5-local-to-cloud-architecture.md'
+  'lakehouse-part-5-local-to-cloud-architecture.md',
+  'rubiks-cube-ursina-part-1.md',
+  'rubiks-cube-ursina-part-2.md',
+  'rubiks-cube-ursina-part-3.md',
+  'rubiks-cube-ursina-part-4.md',
 ]
+
 const BLOG_TILE_EXCERPT_WORDS = 30
 
 function stripMarkdown(markdown: string) {

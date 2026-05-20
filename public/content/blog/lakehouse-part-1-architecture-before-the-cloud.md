@@ -96,11 +96,9 @@ That visibility helps reinforce an important idea:
 
 > The goal is not to recreate enterprise infrastructure on a laptop. The goal is to understand the responsibilities of each architectural layer before managed cloud services abstract them away.
 
-The following parts will explore:
+The full project is available on <a href="https://github.com/highfive52/ecommerce-data-platform" target="_blank" rel="noopener noreferrer">GitHub</a>. The following parts will walk through building it one layer at a time:
 
 * event-driven ingestion with Kafka and Spark Structured Streaming
 * Bronze, Silver, and Gold lakehouse design patterns
 * analytical serving with DuckDB and FastAPI
 * how local architectures can evolve into production cloud-native systems
-
-The full project is available on <a href="https://github.com/highfive52/ecommerce-data-platform" target="_blank" rel="noopener noreferrer">GitHub</a>.

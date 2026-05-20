@@ -27,9 +27,9 @@ A foundation in software and data systems supported by continuous learning in an
 	<img src="/images/cert_ccna.png" alt="Cisco CCNA certification badge" class="cert-icon" />
 </div>
 
-- **<a href="https://www.credly.com/badges/1b3fddb2-a750-4db8-87e2-d16fbd4a69df" target="_blank" rel="noreferrer">AWS Certified Data Engineer – Associate</a>** | Mar 2026 – Mar 2029 | Reg # 530017490
-- **<a href="https://www.credly.com/badges/e4a1c790-0ffa-42c6-b304-99e27fbaf989" target="_blank" rel="noreferrer">Tableau Desktop Qualified Associate</a>** – Tableau | Dec 2017 – Dec 2019 | CID # 995190
-- **<a href="https://learn.microsoft.com/en-us/users/ericdyke-7554/transcript/d4mxmi6kjxow122" target="_blank" rel="noreferrer">MCSE: Data Management and Analytics</a>** – Microsoft | Sep 2016 – Aug 2019 | Cert # F807-7327
+- **<a href="https://www.credly.com/badges/1b3fddb2-a750-4db8-87e2-d16fbd4a69df" target="_blank" rel="noreferrer">AWS Certified Data Engineer – Associate</a>** | Mar 2026 – Mar 2029 
+- **<a href="https://www.credly.com/badges/e4a1c790-0ffa-42c6-b304-99e27fbaf989" target="_blank" rel="noreferrer">Tableau Desktop Qualified Associate</a>** – Tableau | Dec 2017 – Dec 2019 
+- **<a href="https://learn.microsoft.com/en-us/users/ericdyke-7554/transcript/d4mxmi6kjxow122" target="_blank" rel="noreferrer">MCSE: Data Management and Analytics</a>** – Microsoft | Sep 2016 – Aug 2019
 - **<a href="https://www.credly.com/badges/705c5b5a-7516-4577-9420-00b05d4e59d3" target="_blank" rel="noreferrer">Cisco Certified Network Associate Routing and Switching (CCNA)</a>** - Cisco | Jan 2011 - Jan 2014
 
 ### **WORKSHOPS**
