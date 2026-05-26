@@ -57,6 +57,12 @@ const articleFiles = [
   'rubiks-cube-ursina-part-2.md',
   'rubiks-cube-ursina-part-3.md',
   'rubiks-cube-ursina-part-4.md',
+  'rubiks-cube-architecture-refactor.md',
+  'rubiks-cube-design-overall.md',
+  'rubiks-cube-design-phase-1.md',
+  'rubiks-cube-design-phase-2.md',
+  'rubiks-cube-design-phase-3.md',
+  'rubiks-cube-design-phase-4.md',
 ]
 
 const BLOG_TILE_EXCERPT_WORDS = 30

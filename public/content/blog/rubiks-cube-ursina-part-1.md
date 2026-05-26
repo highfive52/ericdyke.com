@@ -67,7 +67,6 @@ pyproject.toml
 README.md
 src/
   rubiks_cube/
-    __init__.py
     main.py
 tests/
   test_main.py
