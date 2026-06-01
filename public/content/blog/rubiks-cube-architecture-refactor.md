@@ -8,6 +8,8 @@ summary: "A follow-up to my original Ursina Rubik’s Cube project, covering the
 
 <a id="top"></a>
 
+<p style="margin-top:0.5rem;margin-bottom:0.75rem;"><strong>Live demo:</strong> <a href="https://highfive52.github.io/rubiks-cube-ursina-3d/" target="_blank" rel="noopener">Play the live demo (Web)</a></p>
+
 This article is a follow-up to my original Rubik’s Cube Ursina project write-up:
 
 [Building a Rubik’s Cube App in Python with Ursina](/blog/rubiks-cube-ursina-part-1)
