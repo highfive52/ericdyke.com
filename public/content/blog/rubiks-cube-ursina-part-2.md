@@ -1,7 +1,7 @@
 ---
 title: "Project Setup: Modern Python Tooling with uv"
 date: "2026-05-20"
-tags: "Python, Ursina, 3D, Rubiks-Cube, uv, Project Setup, Packaging"
+tags: "Python, Ursina, 3D, Rubiks Cube, uv, Project Setup, Packaging"
 summary: "How to set up a modern Python project for a 3D Rubik’s Cube simulator using uv. Covers environment management, project scaffolding, dependency installation, and why uv is a game-changer for Python development."
 series: "Building a 3D Rubik’s Cube App in Python with Ursina"
 series_part: "2"

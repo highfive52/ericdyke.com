@@ -1,7 +1,7 @@
 ---
 title: "Building a 3D Rubik’s Cube App in Python with Ursina"
 date: "2026-05-20"
-tags: "Python, Ursina, 3D, Rubiks-Cube, Packaging, Project Structure"
+tags: "Python, Ursina, 3D, Rubiks Cube, Packaging, Project Structure"
 summary: "A personal and technical introduction to building a 3D Rubik’s Cube simulator in Python using the Ursina game engine. Covers the inspiration, project overview, core features, and project structure."
 series: "Building a 3D Rubik’s Cube App in Python with Ursina"
 hidden: "false"

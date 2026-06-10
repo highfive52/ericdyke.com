@@ -63,6 +63,14 @@ const articleFiles = [
   'rubiks-cube-design-phase-2.md',
   'rubiks-cube-design-phase-3.md',
   'rubiks-cube-design-phase-4.md',
+  'full-stack-dev-workflow-part-1.md',
+  'full-stack-dev-workflow-part-2.md',
+  'full-stack-dev-workflow-part-3.md',
+  'full-stack-dev-workflow-part-4.md',
+  'full-stack-dev-workflow-part-5.md',
+  'full-stack-dev-workflow-part-6.md',
+  'full-stack-dev-workflow-part-7.md',
+  'full-stack-dev-workflow-part-8.md',
 ]
 
 const BLOG_TILE_EXCERPT_WORDS = 30

@@ -1,6 +1,6 @@
 ---
 title: "CameraTracker, Entity Design, and Controls"
-tags: "Python, Ursina, 3D, Rubiks-Cube, Controls, State Management"
+tags: "Python, Ursina, 3D, Rubiks Cube, Controls, State Management"
 summary: "How camera tracking, entity lifecycle, camera-relative controls, and move queueing work in a 3D Rubik’s Cube app built with Ursina. Learn why entity scope matters, how controls adapt to camera orientation, and how to keep state transitions safe."
 series: "Building a 3D Rubik’s Cube App in Python with Ursina"
 series_part: "3"

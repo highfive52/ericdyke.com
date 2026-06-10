@@ -1,7 +1,7 @@
 ---
 title: "Packaging and Distributing the Rubik’s Cube App"
 date: "2026-05-20"
-tags: "Python, Ursina, 3D, Rubiks-Cube, Packaging, PyInstaller, Wheel"
+tags: "Python, Ursina, 3D, Rubiks Cube, Packaging, PyInstaller, Wheel"
 summary: "How to package and distribute a 3D Rubik’s Cube app built with Ursina. Covers PyInstaller for executables, wheel building for Python ecosystems, and why multi-format distribution matters."
 series: "Building a 3D Rubik’s Cube App in Python with Ursina"
 series_part: "4"
