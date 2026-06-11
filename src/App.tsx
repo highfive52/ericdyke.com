@@ -14,6 +14,7 @@ type BlogArticle = {
   slug: string
   title: string
   date: string
+  updated?: string
   tags: string[]
   summary: string
   excerpt: string
@@ -149,6 +150,7 @@ async function loadBlogArticles(): Promise<BlogArticle[]> {
         slug,
         title: meta.title || slug,
         date: meta.date || '',
+        updated: meta.updated || undefined,
         tags,
         summary,
         excerpt,
@@ -165,7 +167,7 @@ async function loadBlogArticles(): Promise<BlogArticle[]> {
     }),
   )
 
-  return records.sort((a, b) => b.date.localeCompare(a.date))
+  return records.sort((a, b) => (b.updated || b.date).localeCompare(a.updated || a.date))
 }
 
 type HomePageProps = {
@@ -314,8 +316,10 @@ function HomePage({ articles }: HomePageProps) {
               pageArticles.map((article) => (
                 <article className="article-card" key={article.slug}>
                   <p className="article-card__meta">
-                    <span>{article.date}</span>
-                    <span>{article.readTime}</span>
+                    <span>
+                      {article.updated ? `Updated: ${article.updated}` : `Published: ${article.date}`}
+                      {` · ${article.readTime}`}
+                    </span>
                   </p>
                   <h3>{article.title}</h3>
                   <p>{article.summary || article.excerpt}</p>
@@ -634,8 +638,11 @@ function BlogArticlePage({ articles }: BlogArticlePageProps) {
           </Link>
         </p>
         <p className="article-page__meta">
-          <span>{article.date}</span>
-          <span>{article.readTime}</span>
+          <span>
+            {`Published: ${article.date}`}
+            {article.updated ? ` · Updated: ${article.updated}` : ''}
+            {` · ${article.readTime}`}
+          </span>
         </p>
         <h1>{article.title}</h1>
         <ul className="article-page__tags">

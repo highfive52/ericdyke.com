@@ -1,6 +1,7 @@
 ---
 title: "The Problem Hasn’t Changed—Only the Tools Have"
 date: "2026-03-26"
+updated: "2026-06-11"
 tags: "Data Engineering, Medallion Architecture, Data Lifecycle, ETL Patterns"
 summary: "As data engineers, we’ve been solving the same fundamental problem for decades. We ingest messy, high-volume data that must be preserved in its raw form—not because it’s immediately useful, but because it serves as a system of record for replayability, auditing, and future, unforeseen questions. From there, the data is incrementally refined: deduplicated, cleansed, and structured into models that are both performant and understandable."
 ---
